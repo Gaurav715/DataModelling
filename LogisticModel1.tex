@@ -1,0 +1,54 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,pdftex]{geometry}
+\usepackage{longtable}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+
+Model 1: Logit, using observations 1--100\\
+Dependent variable: TookAction\\
+Standard errors based on Hessian
+
+\vspace{1em}
+
+\begin{tabular}{lr@{.}lr@{.}lr@{.}lr@{.}l}
+  &
+ \multicolumn{2}{c}{Coefficient} &
+  \multicolumn{2}{c}{Std.\ Error} &
+   \multicolumn{2}{c}{$z$} &
+    \multicolumn{2}{c}{p-value} \\[1ex]
+const &
+  $-$22&5768 &
+    4&79476 &
+      $-$4&709 &
+        0&0000 \\
+Age &
+  0&557366 &
+    0&118128 &
+      4&718 &
+        0&0000 \\
+\end{tabular}
+
+\vspace{1ex}
+\begin{tabular}{lrlr}
+Mean dependent var &  0.400000 & S.D. dependent var &  0.492366 \\
+McFadden $R^2$ &  0.652483 & Adjusted $R^2$ &  0.622766 \\
+Log-likelihood & $-$23.38827 & Akaike criterion &  50.77655 \\
+Schwarz criterion &  55.98689 & Hannan--Quinn &  52.88526 \\
+\end{tabular}
+
+
+\vspace{1ex}
+\vspace{1em}
+\begin{raggedright}
+Number of cases `correctly predicted' = 90 (90.0 percent)\\
+Likelihood ratio test: $\chi^2(1)$ = 87.826 [0.0000]\\
+\end{raggedright}
+
+\end{center}
+
+\end{document}
