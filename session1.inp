@@ -1,0 +1,11 @@
+# Log started 2020-03-18 12:43
+# Record of session commands.  Please note that this will
+# likely require editing if it is to be run as a script.
+open \
+  C:\Users\User\Desktop\Udemy\DataScience$\DataModelling\SimpleRegression20200318\P12-SalaryData.csv
+summary YearsExperience
+summary YearsExperience Salary
+# model 1
+ols Salary 0 YearsExperience
+fcast 1 30 --static
+# store "C:\Users\User\Desktop\Udemy\DataScience$\DataModelling\SimpleRegression20200318\P12-SalaryData1.csv.gdt"

@@ -1,0 +1,48 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,pdftex]{geometry}
+\usepackage{longtable}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+
+Model 1: OLS, using observations 1--30\\
+Dependent variable: Salary\\
+
+\vspace{1em}
+
+\begin{tabular}{lr@{.}lr@{.}lr@{.}lr@{.}l}
+  &
+ \multicolumn{2}{c}{Coefficient} &
+  \multicolumn{2}{c}{Std.\ Error} &
+   \multicolumn{2}{c}{$t$-ratio} &
+    \multicolumn{2}{c}{p-value} \\[1ex]
+const &
+  25792&2 &
+    2273&05 &
+      11&35 &
+        0&0000 \\
+YearsExperience &
+  9449&96 &
+    378&755 &
+      24&95 &
+        0&0000 \\
+\end{tabular}
+
+\vspace{1ex}
+\begin{tabular}{lrlr}
+Mean dependent var &  76003.00 & S.D. dependent var &  27414.43 \\
+Sum squared resid &  9.38\textrm{e+08} & S.E. of regression &  5788.315 \\
+$R^2$ &  0.956957 & Adjusted $R^2$ &  0.955419 \\
+$F(1, 28)$ &  622.5072 & P-value($F$) &  1.14\textrm{e--20} \\
+Log-likelihood & $-$301.4412 & Akaike criterion &  606.8823 \\
+Schwarz criterion &  609.6847 & Hannan--Quinn &  607.7788 \\
+\end{tabular}
+
+
+\end{center}
+
+\end{document}
