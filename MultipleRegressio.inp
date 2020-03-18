@@ -1,0 +1,17 @@
+# Log started 2020-03-18 19:16
+# Record of session commands.  Please note that this will
+# likely require editing if it is to be run as a script.
+open \
+  C:\Users\User\Desktop\Udemy\DataScience$\DataModelling\MultipleRegression20200318\P12-50-Startups.csv
+dummify State
+rename 6 NewYork
+rename 7 California
+# model 1
+ols Profit 0 Administration MarketingSpend NewYork RDSpend
+# model 2
+ols Profit 0 MarketingSpend NewYork RDSpend
+# model 3
+ols Profit 0 MarketingSpend RDSpend
+# model 4
+ols Profit 0 RDSpend
+# store "C:\Users\User\Desktop\Udemy\DataScience$\DataModelling\MultipleRegression20200318\BackwardPropagation_MultipleRegression.gdt"

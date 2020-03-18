@@ -1,0 +1,58 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,pdftex]{geometry}
+\usepackage{longtable}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+
+Model 2: OLS, using observations 1--50\\
+Dependent variable: Profit\\
+
+\vspace{1em}
+
+\begin{tabular}{lr@{.}lr@{.}lr@{.}lr@{.}l}
+  &
+ \multicolumn{2}{c}{Coefficient} &
+  \multicolumn{2}{c}{Std.\ Error} &
+   \multicolumn{2}{c}{$t$-ratio} &
+    \multicolumn{2}{c}{p-value} \\[1ex]
+const &
+  47721&8 &
+    3018&34 &
+      15&81 &
+        0&0000 \\
+MarketingSpend &
+  0&0285947 &
+    0&0158086 &
+      1&809 &
+        0&0770 \\
+NewYork &
+  $-$1484&61 &
+    2646&17 &
+      $-$0&5610 &
+        0&5775 \\
+RDSpend &
+  0&800294 &
+    0&0421740 &
+      18&98 &
+        0&0000 \\
+\end{tabular}
+
+\vspace{1ex}
+\begin{tabular}{lrlr}
+Mean dependent var &  112012.6 & S.D. dependent var &  40306.18 \\
+Sum squared resid &  3.92\textrm{e+09} & S.E. of regression &  9228.486 \\
+$R^2$ &  0.950787 & Adjusted $R^2$ &  0.947578 \\
+$F(3, 46)$ &  296.2378 & P-value($F$) &  4.44\textrm{e--30} \\
+Log-likelihood & $-$525.3649 & Akaike criterion &  1058.730 \\
+Schwarz criterion &  1066.378 & Hannan--Quinn &  1061.642 \\
+\end{tabular}
+
+
+\end{center}
+
+\end{document}
