@@ -1,0 +1,54 @@
+# Log started 2020-03-19 11:33
+# Record of session commands.  Please note that this will
+# likely require editing if it is to be run as a script.
+open \
+  C:\Users\User\Desktop\Udemy\DataScience$\DemoGraphic\P12-Churn-Modelling.csv
+dummify Gender
+dummify Geography
+rename 17 France
+rename 18 Spain
+rename 19 Germany
+rename 15 Female
+rename 16 Male
+# model 1
+logit Exited 0 CreditScore Age Balance NumOfProducts Tenure \
+  IsActiveMember HasCrCard EstimatedSalary Female Spain Germany \
+  --p-values
+# model 2
+logit Exited 0 CreditScore Age Balance NumOfProducts Tenure \
+  IsActiveMember HasCrCard EstimatedSalary Female Germany --p-values
+# model 3
+logit Exited 0 CreditScore Age Balance NumOfProducts Tenure \
+  IsActiveMember EstimatedSalary Female Germany --p-values
+# model 4
+logit Exited 0 CreditScore Age Balance NumOfProducts Tenure \
+  IsActiveMember Female Germany --p-values
+Log_Balance= log10(Balance+1)
+# model 5
+logit Exited 0 CreditScore Age NumOfProducts Tenure IsActiveMember Female \
+  Germany Log_Balance --p-values
+Wealth_accumulation = Balance/Age
+# model 6
+logit Exited 0 CreditScore Age NumOfProducts Tenure IsActiveMember Female \
+  Germany Log_Balance Wealth_accumulation --p-values
+# model 7
+logit Exited 0 CreditScore Age NumOfProducts Tenure IsActiveMember Female \
+  Germany Wealth_accumulation --p-values
+vif
+bkw
+# model 6
+vif
+bkw
+Log_WA= log10(Balance/Age+1)
+# model 8
+logit Exited 0 CreditScore Age NumOfProducts Tenure IsActiveMember Female \
+  Germany Log_WA Log_Balance --p-values
+vif
+bkw
+# model 9
+logit Exited 0 CreditScore Age NumOfProducts Tenure IsActiveMember Female \
+  Germany Log_WA --p-values
+# model 10
+logit Exited 0 CreditScore Age NumOfProducts Tenure IsActiveMember Female \
+  Germany Log_Balance --p-values
+# store "C:\Users\User\Desktop\Udemy\DataScience$\DemoGraphic\DemoGraphic.gdt" --gzipped=1

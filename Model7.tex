@@ -1,0 +1,89 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,pdftex]{geometry}
+\usepackage{longtable}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+
+Model 7: Logit, using observations 1--10000\\
+Dependent variable: Exited\\
+Standard errors based on Hessian
+
+\vspace{1em}
+
+\begin{tabular}{lr@{.}lr@{.}lr@{.}lr@{.}l}
+  &
+ \multicolumn{2}{c}{Coefficient} &
+  \multicolumn{2}{c}{Std.\ Error} &
+   \multicolumn{2}{c}{$z$} &
+    \multicolumn{2}{c}{p-value} \\[1ex]
+const &
+  $-$3&93393 &
+    0&246385 &
+      $-$15&97 &
+        0&0000 \\
+CreditScore &
+  $-$0&000671869 &
+    0&000280046 &
+      $-$2&399 &
+        0&0164 \\
+Age &
+  0&0758300 &
+    0&00274955 &
+      27&58 &
+        0&0000 \\
+NumOfProducts &
+  $-$0&121038 &
+    0&0471074 &
+      $-$2&569 &
+        0&0102 \\
+Tenure &
+  $-$0&0158045 &
+    0&00934123 &
+      $-$1&692 &
+        0&0907 \\
+IsActiveMember &
+  $-$1&07881 &
+    0&0576645 &
+      $-$18&71 &
+        0&0000 \\
+Female &
+  0&526299 &
+    0&0544270 &
+      9&670 &
+        0&0000 \\
+Germany &
+  0&808180 &
+    0&0629285 &
+      12&84 &
+        0&0000 \\
+Wealth\_accumulation &
+  7&07501\textrm{e--005} &
+    1&94600\textrm{e--005} &
+      3&636 &
+        0&0003 \\
+\end{tabular}
+
+\vspace{1ex}
+\begin{tabular}{lrlr}
+Mean dependent var &  0.203700 & S.D. dependent var &  0.402769 \\
+McFadden $R^2$ &  0.151650 & Adjusted $R^2$ &  0.149869 \\
+Log-likelihood & $-$4288.318 & Akaike criterion &  8594.635 \\
+Schwarz criterion &  8659.528 & Hannan--Quinn &  8616.601 \\
+\end{tabular}
+
+
+\vspace{1ex}
+\vspace{1em}
+\begin{raggedright}
+Number of cases `correctly predicted' = 8121 (81.2 percent)\\
+Likelihood ratio test: $\chi^2(8)$ = 1533.147 [0.0000]\\
+\end{raggedright}
+
+\end{center}
+
+\end{document}
