@@ -1,0 +1,13 @@
+# Log started 2020-03-19 23:02
+# Record of session commands.  Please note that this will
+# likely require editing if it is to be run as a script.
+open \
+  C:\Users\User\Desktop\Udemy\DataScience$\DataModelling\DemoGraphic\DemoGraphic.gdt
+# model 1
+logit Exited 0 Log_Balance Germany Female EstimatedSalary IsActiveMember \
+  NumOfProducts Tenure Age CreditScore
+# model 2
+logit Exited 0 Log_Balance Germany Female IsActiveMember NumOfProducts \
+  Tenure Age CreditScore
+include oddsratios.gfn
+# btmp___0 = GUI_oddsratios()
