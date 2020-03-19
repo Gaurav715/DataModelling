@@ -1,0 +1,12 @@
+# Log started 2020-03-19 19:47
+# Record of session commands.  Please note that this will
+# likely require editing if it is to be run as a script.
+open \
+  C:\Users\User\Desktop\Udemy\DataScience$\DataModelling\DemoGraphic\DemoGraphic.gdt
+# model 1
+logit Exited 0 Age CreditScore NumOfProducts IsActiveMember Female \
+  Germany Tenure Log_Balance
+fcast 1 10000 --static
+# model 1
+fcast 1 10000 p_hat
+# store "C:\Users\User\Desktop\Udemy\DataScience$\DataModelling\DemoGraphic\DemoGraphicP_Hat.csv"  RowNumber Exited p_hat --csv
